@@ -32,4 +32,5 @@
 !insert (r2, Shreck2) into movRental
 !insert (r3, Shreck3) into movRental
 !insert (r4, Shreck3) into movRental
+! jill.Statement()
 
