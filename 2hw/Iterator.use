@@ -16,8 +16,9 @@ operations
     begin
       self.current := self.current.next
     end
-  hasNext()
+  hasNext():Boolean
     begin
+      result := self.current.next->notEmpty
     end
 end
 
