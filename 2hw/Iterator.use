@@ -10,9 +10,11 @@ end
 
 class Iterator
 attributes
+  current:Aggregate
 operations
   next()
     begin
+      self.current := self.current.next
     end
   hasNext()
     begin
