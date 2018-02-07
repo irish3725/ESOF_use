@@ -1,0 +1,37 @@
+-- USE model for an Iterator --
+
+model Iterator
+
+-- classes
+class Aggregate
+attributes
+operations
+end
+
+class Iterator
+attributes
+operations
+  next()
+    begin
+    end
+  hasNext()
+    begin
+    end
+end
+
+-- associations
+
+aggregation creates between
+  Iterator [1] role iter 
+  Aggregate [0..*] role agg 
+end
+
+association next between
+  Aggregate [1] 
+  Aggregate [1] role next
+end
+
+-- constraints
+--constraints
+--context Iterator
+--  inv hasNext:hasNext
