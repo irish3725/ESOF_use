@@ -16,3 +16,9 @@
 !insert (node1,node2) into next
 !insert (node2,node3) into next
 
+-- assign varibles
+!set linked_list.current := node0
+
+-- call next
+! linked_list.next()
+

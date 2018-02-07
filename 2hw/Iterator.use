@@ -14,11 +14,16 @@ attributes
 operations
   next()
     begin
-      self.current := self.current.next
+      declare n:Boolean;
+      n := self.hasNext();  
+      if n then 
+        self.current := self.current.next;
+      end;
     end
+
   hasNext():Boolean
     begin
-      result := self.current.next->notEmpty
+      result := self.current.next->notEmpty;
     end
 end
 
@@ -35,6 +40,7 @@ association next between
 end
 
 -- constraints
---constraints
---context Iterator
---  inv hasNext:hasNext
+constraints
+context Iterator::next()
+  pre nextPre: current.next->notEmpty 
+  post nextPost: current->notEmpty
