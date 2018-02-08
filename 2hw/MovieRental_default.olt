@@ -14,48 +14,56 @@
     <node id="r2" sizeCalculated="true" type="Object">
         <name>r2</name>
         <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
-            <x>86.9610672986496</x>
-            <y>134.97862657043459</y>
+            <x>115.9610672986496</x>
+            <y>109.97862657043459</y>
         </strategy>
         <hidden>false</hidden>
     </node>
     <node id="Shreck3" sizeCalculated="true" type="Object">
         <name>Shreck3</name>
         <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
-            <x>282.8470130740769</x>
-            <y>293.94660829461117</y>
+            <x>232.84701307407693</x>
+            <y>212.94660829461117</y>
         </strategy>
         <hidden>false</hidden>
     </node>
     <node id="r3" sizeCalculated="true" type="Object">
         <name>r3</name>
         <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
-            <x>1.543725068980251</x>
-            <y>293.99874872287523</y>
+            <x>8.543725068980251</x>
+            <y>212.99874872287523</y>
         </strategy>
         <hidden>false</hidden>
     </node>
     <node id="Shreck" sizeCalculated="true" type="Object">
         <name>Shreck</name>
         <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
-            <x>285.584518816981</x>
-            <y>109.83924404826445</y>
+            <x>453.584518816981</x>
+            <y>14.839244048264447</y>
         </strategy>
         <hidden>false</hidden>
     </node>
     <node id="Shreck2" sizeCalculated="true" type="Object">
         <name>Shreck2</name>
         <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
-            <x>283.1737337747394</x>
-            <y>214.16329922829425</y>
+            <x>327.1737337747394</x>
+            <y>111.16329922829425</y>
         </strategy>
         <hidden>false</hidden>
     </node>
     <node id="r4" sizeCalculated="true" type="Object">
         <name>r4</name>
         <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
-            <x>287.87115182860646</x>
-            <y>419.5688845472035</y>
+            <x>477.87115182860646</x>
+            <y>329.5688845472035</y>
+        </strategy>
+        <hidden>false</hidden>
+    </node>
+    <node id="Charge1" sizeCalculated="true" type="Object">
+        <name>Charge1</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
+            <x>11.18416163106366</x>
+            <y>397.9200984525819</y>
         </strategy>
         <hidden>false</hidden>
     </node>
@@ -70,15 +78,15 @@
     <node id="jill" sizeCalculated="true" type="Object">
         <name>jill</name>
         <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
-            <x>9.227058497005274</x>
-            <y>419.65761436966056</y>
+            <x>225.22705849700526</x>
+            <y>424.65761436966056</y>
         </strategy>
         <hidden>false</hidden>
     </node>
     <node id="r1" sizeCalculated="true" type="Object">
         <name>r1</name>
         <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
-            <x>274.1488789512421</x>
+            <x>244.14887895124212</x>
             <y>14.057347902469985</y>
         </strategy>
         <hidden>false</hidden>
@@ -88,35 +96,6 @@
         <target>r4</target>
         <name>custRentals</name>
         <properties>
-            <edgeproperty
-                id="[custRentals : (rentals:r4, renter:jill)]::source::multiplicity"
-                sizeCalculated="true" type="multiplicity"
-                userDefined="false" visible="true">
-                <name>1</name>
-                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
-                    <userOffsetX>0.0</userOffsetX>
-                    <userOffsetY>0.0</userOffsetY>
-                    <attached>[custRentals : (rentals:r4, renter:jill)]::WayPoint::0</attached>
-                    <offset_x>8</offset_x>
-                    <offset_y>8</offset_y>
-                    <placement>BOTTOM</placement>
-                </strategy>
-                <hidden>false</hidden>
-            </edgeproperty>
-            <edgeproperty
-                id="[custRentals : (rentals:r4, renter:jill)]::source::rolename"
-                sizeCalculated="true" type="rolename" userDefined="true" visible="true">
-                <name>renter</name>
-                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
-                    <userOffsetX>1.0</userOffsetX>
-                    <userOffsetY>-8.0</userOffsetY>
-                    <attached>[custRentals : (rentals:r4, renter:jill)]::WayPoint::0</attached>
-                    <offset_x>8</offset_x>
-                    <offset_y>8</offset_y>
-                    <placement>TOP</placement>
-                </strategy>
-                <hidden>false</hidden>
-            </edgeproperty>
             <edgeproperty
                 id="[custRentals : (rentals:r4, renter:jill)]::AssociationName"
                 sizeCalculated="true" type="associationName"
@@ -131,6 +110,35 @@
                         <related0>[custRentals : (rentals:r4, renter:jill)]::WayPoint::0</related0>
                         <related1>[custRentals : (rentals:r4, renter:jill)]::WayPoint::1</related1>
                     </related>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty
+                id="[custRentals : (rentals:r4, renter:jill)]::source::rolename"
+                sizeCalculated="true" type="rolename" userDefined="true" visible="true">
+                <name>renter</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>11.0</userOffsetX>
+                    <userOffsetY>23.0</userOffsetY>
+                    <attached>[custRentals : (rentals:r4, renter:jill)]::WayPoint::0</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>TOP</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty
+                id="[custRentals : (rentals:r4, renter:jill)]::source::multiplicity"
+                sizeCalculated="true" type="multiplicity"
+                userDefined="false" visible="true">
+                <name>1</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[custRentals : (rentals:r4, renter:jill)]::WayPoint::0</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>BOTTOM</placement>
                 </strategy>
                 <hidden>false</hidden>
             </edgeproperty>
@@ -154,8 +162,8 @@
                 sizeCalculated="true" type="rolename" userDefined="true" visible="true">
                 <name>rentals</name>
                 <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
-                    <userOffsetX>3.0</userOffsetX>
-                    <userOffsetY>-10.0</userOffsetY>
+                    <userOffsetX>10.0</userOffsetX>
+                    <userOffsetY>21.0</userOffsetY>
                     <attached>[custRentals : (rentals:r4, renter:jill)]::WayPoint::1</attached>
                     <offset_x>8</offset_x>
                     <offset_y>8</offset_y>
@@ -201,13 +209,29 @@
         <name>movRental</name>
         <properties>
             <edgeproperty
-                id="[movRental : (movRentals:r2, movie:Shreck2)]::source::rolename"
-                sizeCalculated="true" type="rolename"
+                id="[movRental : (movRentals:r2, movie:Shreck2)]::AssociationName"
+                sizeCalculated="true" type="associationName"
                 userDefined="false" visible="true">
+                <name>movRental</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyInBetween">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <offsetX>0.0</offsetX>
+                    <offsetY>-10.0</offsetY>
+                    <related length="2">
+                        <related0>[movRental : (movRentals:r2, movie:Shreck2)]::WayPoint::0</related0>
+                        <related1>[movRental : (movRentals:r2, movie:Shreck2)]::WayPoint::1</related1>
+                    </related>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty
+                id="[movRental : (movRentals:r2, movie:Shreck2)]::source::rolename"
+                sizeCalculated="true" type="rolename" userDefined="true" visible="true">
                 <name>movRentals</name>
                 <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
                     <userOffsetX>0.0</userOffsetX>
-                    <userOffsetY>0.0</userOffsetY>
+                    <userOffsetY>-11.0</userOffsetY>
                     <attached>[movRental : (movRentals:r2, movie:Shreck2)]::WayPoint::0</attached>
                     <offset_x>8</offset_x>
                     <offset_y>8</offset_y>
@@ -231,29 +255,12 @@
                 <hidden>false</hidden>
             </edgeproperty>
             <edgeproperty
-                id="[movRental : (movRentals:r2, movie:Shreck2)]::AssociationName"
-                sizeCalculated="true" type="associationName"
-                userDefined="false" visible="true">
-                <name>movRental</name>
-                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyInBetween">
-                    <userOffsetX>0.0</userOffsetX>
-                    <userOffsetY>0.0</userOffsetY>
-                    <offsetX>0.0</offsetX>
-                    <offsetY>-10.0</offsetY>
-                    <related length="2">
-                        <related0>[movRental : (movRentals:r2, movie:Shreck2)]::WayPoint::0</related0>
-                        <related1>[movRental : (movRentals:r2, movie:Shreck2)]::WayPoint::1</related1>
-                    </related>
-                </strategy>
-                <hidden>false</hidden>
-            </edgeproperty>
-            <edgeproperty
                 id="[movRental : (movRentals:r2, movie:Shreck2)]::target::rolename"
                 sizeCalculated="true" type="rolename" userDefined="true" visible="true">
                 <name>movie</name>
                 <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
-                    <userOffsetX>48.0</userOffsetX>
-                    <userOffsetY>-11.0</userOffsetY>
+                    <userOffsetX>6.0</userOffsetX>
+                    <userOffsetY>5.0</userOffsetY>
                     <attached>[movRental : (movRentals:r2, movie:Shreck2)]::WayPoint::1</attached>
                     <offset_x>8</offset_x>
                     <offset_y>8</offset_y>
@@ -309,10 +316,139 @@
         <linkValue>[movRental : (movRentals:r2, movie:Shreck2)]</linkValue>
     </edge>
     <edge type="BinaryEdge">
+        <source>jill</source>
+        <target>Charge1</target>
+        <name>customerCharges</name>
+        <properties>
+            <edgeproperty
+                id="[customerCharges : (charges:Charge1, cust:jill)]::AssociationName"
+                sizeCalculated="true" type="associationName"
+                userDefined="false" visible="true">
+                <name>customerCharges</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyInBetween">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <offsetX>0.0</offsetX>
+                    <offsetY>-10.0</offsetY>
+                    <related length="2">
+                        <related0>[customerCharges : (charges:Charge1, cust:jill)]::WayPoint::0</related0>
+                        <related1>[customerCharges : (charges:Charge1, cust:jill)]::WayPoint::1</related1>
+                    </related>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty
+                id="[customerCharges : (charges:Charge1, cust:jill)]::source::rolename"
+                sizeCalculated="true" type="rolename" userDefined="true" visible="true">
+                <name>cust</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>-3.0</userOffsetX>
+                    <userOffsetY>7.0</userOffsetY>
+                    <attached>[customerCharges : (charges:Charge1, cust:jill)]::WayPoint::0</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>TOP</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty
+                id="[customerCharges : (charges:Charge1, cust:jill)]::source::multiplicity"
+                sizeCalculated="true" type="multiplicity"
+                userDefined="false" visible="true">
+                <name>1</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[customerCharges : (charges:Charge1, cust:jill)]::WayPoint::0</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>BOTTOM</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty
+                id="[customerCharges : (charges:Charge1, cust:jill)]::target::multiplicity"
+                sizeCalculated="true" type="multiplicity"
+                userDefined="false" visible="true">
+                <name>*</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[customerCharges : (charges:Charge1, cust:jill)]::WayPoint::1</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>BOTTOM</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty
+                id="[customerCharges : (charges:Charge1, cust:jill)]::target::rolename"
+                sizeCalculated="true" type="rolename" userDefined="true" visible="true">
+                <name>charges</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>3.0</userOffsetX>
+                    <userOffsetY>-20.0</userOffsetY>
+                    <attached>[customerCharges : (charges:Charge1, cust:jill)]::WayPoint::1</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>TOP</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+        </properties>
+        <waypoints>
+            <edgeproperty
+                id="[customerCharges : (charges:Charge1, cust:jill)]::WayPoint::0"
+                sizeCalculated="true" type="WayPoint"
+                userDefined="false" visible="true">
+                <name>0</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                </strategy>
+                <id>0</id>
+                <specialid>1</specialid>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty
+                id="[customerCharges : (charges:Charge1, cust:jill)]::WayPoint::1"
+                sizeCalculated="true" type="WayPoint"
+                userDefined="false" visible="true">
+                <name>1</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                </strategy>
+                <id>1</id>
+                <specialid>2</specialid>
+                <hidden>false</hidden>
+            </edgeproperty>
+        </waypoints>
+        <hidden>false</hidden>
+        <linkValue>[customerCharges : (charges:Charge1, cust:jill)]</linkValue>
+    </edge>
+    <edge type="BinaryEdge">
         <source>jack</source>
         <target>r3</target>
         <name>custRentals</name>
         <properties>
+            <edgeproperty
+                id="[custRentals : (rentals:r3, renter:jack)]::AssociationName"
+                sizeCalculated="true" type="associationName"
+                userDefined="false" visible="true">
+                <name>custRentals</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyInBetween">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <offsetX>0.0</offsetX>
+                    <offsetY>-10.0</offsetY>
+                    <related length="2">
+                        <related0>[custRentals : (rentals:r3, renter:jack)]::WayPoint::0</related0>
+                        <related1>[custRentals : (rentals:r3, renter:jack)]::WayPoint::1</related1>
+                    </related>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
             <edgeproperty
                 id="[custRentals : (rentals:r3, renter:jack)]::source::multiplicity"
                 sizeCalculated="true" type="multiplicity"
@@ -343,19 +479,16 @@
                 <hidden>false</hidden>
             </edgeproperty>
             <edgeproperty
-                id="[custRentals : (rentals:r3, renter:jack)]::AssociationName"
-                sizeCalculated="true" type="associationName"
-                userDefined="false" visible="true">
-                <name>custRentals</name>
-                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyInBetween">
-                    <userOffsetX>0.0</userOffsetX>
-                    <userOffsetY>0.0</userOffsetY>
-                    <offsetX>0.0</offsetX>
-                    <offsetY>-10.0</offsetY>
-                    <related length="2">
-                        <related0>[custRentals : (rentals:r3, renter:jack)]::WayPoint::0</related0>
-                        <related1>[custRentals : (rentals:r3, renter:jack)]::WayPoint::1</related1>
-                    </related>
+                id="[custRentals : (rentals:r3, renter:jack)]::target::rolename"
+                sizeCalculated="true" type="rolename" userDefined="true" visible="true">
+                <name>rentals</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>5.0</userOffsetX>
+                    <userOffsetY>4.0</userOffsetY>
+                    <attached>[custRentals : (rentals:r3, renter:jack)]::WayPoint::1</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>TOP</placement>
                 </strategy>
                 <hidden>false</hidden>
             </edgeproperty>
@@ -371,20 +504,6 @@
                     <offset_x>8</offset_x>
                     <offset_y>8</offset_y>
                     <placement>BOTTOM</placement>
-                </strategy>
-                <hidden>false</hidden>
-            </edgeproperty>
-            <edgeproperty
-                id="[custRentals : (rentals:r3, renter:jack)]::target::rolename"
-                sizeCalculated="true" type="rolename" userDefined="true" visible="true">
-                <name>rentals</name>
-                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
-                    <userOffsetX>5.0</userOffsetX>
-                    <userOffsetY>4.0</userOffsetY>
-                    <attached>[custRentals : (rentals:r3, renter:jack)]::WayPoint::1</attached>
-                    <offset_x>8</offset_x>
-                    <offset_y>8</offset_y>
-                    <placement>TOP</placement>
                 </strategy>
                 <hidden>false</hidden>
             </edgeproperty>
@@ -426,12 +545,29 @@
         <name>movRental</name>
         <properties>
             <edgeproperty
+                id="[movRental : (movRentals:r1, movie:Shreck)]::AssociationName"
+                sizeCalculated="true" type="associationName"
+                userDefined="false" visible="true">
+                <name>movRental</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyInBetween">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <offsetX>0.0</offsetX>
+                    <offsetY>-10.0</offsetY>
+                    <related length="2">
+                        <related0>[movRental : (movRentals:r1, movie:Shreck)]::WayPoint::0</related0>
+                        <related1>[movRental : (movRentals:r1, movie:Shreck)]::WayPoint::1</related1>
+                    </related>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty
                 id="[movRental : (movRentals:r1, movie:Shreck)]::source::rolename"
                 sizeCalculated="true" type="rolename" userDefined="true" visible="true">
                 <name>movRentals</name>
                 <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
-                    <userOffsetX>6.0</userOffsetX>
-                    <userOffsetY>1.0</userOffsetY>
+                    <userOffsetX>3.0</userOffsetX>
+                    <userOffsetY>-9.0</userOffsetY>
                     <attached>[movRental : (movRentals:r1, movie:Shreck)]::WayPoint::0</attached>
                     <offset_x>8</offset_x>
                     <offset_y>8</offset_y>
@@ -455,19 +591,17 @@
                 <hidden>false</hidden>
             </edgeproperty>
             <edgeproperty
-                id="[movRental : (movRentals:r1, movie:Shreck)]::AssociationName"
-                sizeCalculated="true" type="associationName"
+                id="[movRental : (movRentals:r1, movie:Shreck)]::target::multiplicity"
+                sizeCalculated="true" type="multiplicity"
                 userDefined="false" visible="true">
-                <name>movRental</name>
-                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyInBetween">
+                <name>1</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
                     <userOffsetX>0.0</userOffsetX>
                     <userOffsetY>0.0</userOffsetY>
-                    <offsetX>0.0</offsetX>
-                    <offsetY>-10.0</offsetY>
-                    <related length="2">
-                        <related0>[movRental : (movRentals:r1, movie:Shreck)]::WayPoint::0</related0>
-                        <related1>[movRental : (movRentals:r1, movie:Shreck)]::WayPoint::1</related1>
-                    </related>
+                    <attached>[movRental : (movRentals:r1, movie:Shreck)]::WayPoint::1</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>BOTTOM</placement>
                 </strategy>
                 <hidden>false</hidden>
             </edgeproperty>
@@ -482,21 +616,6 @@
                     <offset_x>8</offset_x>
                     <offset_y>8</offset_y>
                     <placement>TOP</placement>
-                </strategy>
-                <hidden>false</hidden>
-            </edgeproperty>
-            <edgeproperty
-                id="[movRental : (movRentals:r1, movie:Shreck)]::target::multiplicity"
-                sizeCalculated="true" type="multiplicity"
-                userDefined="false" visible="true">
-                <name>1</name>
-                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
-                    <userOffsetX>0.0</userOffsetX>
-                    <userOffsetY>0.0</userOffsetY>
-                    <attached>[movRental : (movRentals:r1, movie:Shreck)]::WayPoint::1</attached>
-                    <offset_x>8</offset_x>
-                    <offset_y>8</offset_y>
-                    <placement>BOTTOM</placement>
                 </strategy>
                 <hidden>false</hidden>
             </edgeproperty>
@@ -538,6 +657,23 @@
         <name>custRentals</name>
         <properties>
             <edgeproperty
+                id="[custRentals : (rentals:r1, renter:jack)]::AssociationName"
+                sizeCalculated="true" type="associationName"
+                userDefined="false" visible="true">
+                <name>custRentals</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyInBetween">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <offsetX>0.0</offsetX>
+                    <offsetY>-10.0</offsetY>
+                    <related length="2">
+                        <related0>[custRentals : (rentals:r1, renter:jack)]::WayPoint::0</related0>
+                        <related1>[custRentals : (rentals:r1, renter:jack)]::WayPoint::1</related1>
+                    </related>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty
                 id="[custRentals : (rentals:r1, renter:jack)]::source::multiplicity"
                 sizeCalculated="true" type="multiplicity"
                 userDefined="false" visible="true">
@@ -563,23 +699,6 @@
                     <offset_x>8</offset_x>
                     <offset_y>8</offset_y>
                     <placement>TOP</placement>
-                </strategy>
-                <hidden>false</hidden>
-            </edgeproperty>
-            <edgeproperty
-                id="[custRentals : (rentals:r1, renter:jack)]::AssociationName"
-                sizeCalculated="true" type="associationName"
-                userDefined="false" visible="true">
-                <name>custRentals</name>
-                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyInBetween">
-                    <userOffsetX>0.0</userOffsetX>
-                    <userOffsetY>0.0</userOffsetY>
-                    <offsetX>0.0</offsetX>
-                    <offsetY>-10.0</offsetY>
-                    <related length="2">
-                        <related0>[custRentals : (rentals:r1, renter:jack)]::WayPoint::0</related0>
-                        <related1>[custRentals : (rentals:r1, renter:jack)]::WayPoint::1</related1>
-                    </related>
                 </strategy>
                 <hidden>false</hidden>
             </edgeproperty>
@@ -650,17 +769,19 @@
         <name>movRental</name>
         <properties>
             <edgeproperty
-                id="[movRental : (movRentals:r3, movie:Shreck3)]::source::multiplicity"
-                sizeCalculated="true" type="multiplicity"
+                id="[movRental : (movRentals:r3, movie:Shreck3)]::AssociationName"
+                sizeCalculated="true" type="associationName"
                 userDefined="false" visible="true">
-                <name>*</name>
-                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                <name>movRental</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyInBetween">
                     <userOffsetX>0.0</userOffsetX>
                     <userOffsetY>0.0</userOffsetY>
-                    <attached>[movRental : (movRentals:r3, movie:Shreck3)]::WayPoint::0</attached>
-                    <offset_x>8</offset_x>
-                    <offset_y>8</offset_y>
-                    <placement>BOTTOM</placement>
+                    <offsetX>0.0</offsetX>
+                    <offsetY>-10.0</offsetY>
+                    <related length="2">
+                        <related0>[movRental : (movRentals:r3, movie:Shreck3)]::WayPoint::0</related0>
+                        <related1>[movRental : (movRentals:r3, movie:Shreck3)]::WayPoint::1</related1>
+                    </related>
                 </strategy>
                 <hidden>false</hidden>
             </edgeproperty>
@@ -679,19 +800,17 @@
                 <hidden>false</hidden>
             </edgeproperty>
             <edgeproperty
-                id="[movRental : (movRentals:r3, movie:Shreck3)]::AssociationName"
-                sizeCalculated="true" type="associationName"
+                id="[movRental : (movRentals:r3, movie:Shreck3)]::source::multiplicity"
+                sizeCalculated="true" type="multiplicity"
                 userDefined="false" visible="true">
-                <name>movRental</name>
-                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyInBetween">
+                <name>*</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
                     <userOffsetX>0.0</userOffsetX>
                     <userOffsetY>0.0</userOffsetY>
-                    <offsetX>0.0</offsetX>
-                    <offsetY>-10.0</offsetY>
-                    <related length="2">
-                        <related0>[movRental : (movRentals:r3, movie:Shreck3)]::WayPoint::0</related0>
-                        <related1>[movRental : (movRentals:r3, movie:Shreck3)]::WayPoint::1</related1>
-                    </related>
+                    <attached>[movRental : (movRentals:r3, movie:Shreck3)]::WayPoint::0</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>BOTTOM</placement>
                 </strategy>
                 <hidden>false</hidden>
             </edgeproperty>
@@ -700,8 +819,8 @@
                 sizeCalculated="true" type="rolename" userDefined="true" visible="true">
                 <name>movie</name>
                 <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
-                    <userOffsetX>5.0</userOffsetX>
-                    <userOffsetY>-9.0</userOffsetY>
+                    <userOffsetX>6.0</userOffsetX>
+                    <userOffsetY>9.0</userOffsetY>
                     <attached>[movRental : (movRentals:r3, movie:Shreck3)]::WayPoint::1</attached>
                     <offset_x>8</offset_x>
                     <offset_y>8</offset_y>
@@ -762,6 +881,23 @@
         <name>custRentals</name>
         <properties>
             <edgeproperty
+                id="[custRentals : (rentals:r2, renter:jack)]::AssociationName"
+                sizeCalculated="true" type="associationName"
+                userDefined="false" visible="true">
+                <name>custRentals</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyInBetween">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <offsetX>0.0</offsetX>
+                    <offsetY>-10.0</offsetY>
+                    <related length="2">
+                        <related0>[custRentals : (rentals:r2, renter:jack)]::WayPoint::0</related0>
+                        <related1>[custRentals : (rentals:r2, renter:jack)]::WayPoint::1</related1>
+                    </related>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty
                 id="[custRentals : (rentals:r2, renter:jack)]::source::multiplicity"
                 sizeCalculated="true" type="multiplicity"
                 userDefined="false" visible="true">
@@ -791,19 +927,17 @@
                 <hidden>false</hidden>
             </edgeproperty>
             <edgeproperty
-                id="[custRentals : (rentals:r2, renter:jack)]::AssociationName"
-                sizeCalculated="true" type="associationName"
+                id="[custRentals : (rentals:r2, renter:jack)]::target::multiplicity"
+                sizeCalculated="true" type="multiplicity"
                 userDefined="false" visible="true">
-                <name>custRentals</name>
-                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyInBetween">
+                <name>*</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
                     <userOffsetX>0.0</userOffsetX>
                     <userOffsetY>0.0</userOffsetY>
-                    <offsetX>0.0</offsetX>
-                    <offsetY>-10.0</offsetY>
-                    <related length="2">
-                        <related0>[custRentals : (rentals:r2, renter:jack)]::WayPoint::0</related0>
-                        <related1>[custRentals : (rentals:r2, renter:jack)]::WayPoint::1</related1>
-                    </related>
+                    <attached>[custRentals : (rentals:r2, renter:jack)]::WayPoint::1</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>BOTTOM</placement>
                 </strategy>
                 <hidden>false</hidden>
             </edgeproperty>
@@ -818,21 +952,6 @@
                     <offset_x>8</offset_x>
                     <offset_y>8</offset_y>
                     <placement>TOP</placement>
-                </strategy>
-                <hidden>false</hidden>
-            </edgeproperty>
-            <edgeproperty
-                id="[custRentals : (rentals:r2, renter:jack)]::target::multiplicity"
-                sizeCalculated="true" type="multiplicity"
-                userDefined="false" visible="true">
-                <name>*</name>
-                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
-                    <userOffsetX>0.0</userOffsetX>
-                    <userOffsetY>0.0</userOffsetY>
-                    <attached>[custRentals : (rentals:r2, renter:jack)]::WayPoint::1</attached>
-                    <offset_x>8</offset_x>
-                    <offset_y>8</offset_y>
-                    <placement>BOTTOM</placement>
                 </strategy>
                 <hidden>false</hidden>
             </edgeproperty>
@@ -874,6 +993,23 @@
         <name>movRental</name>
         <properties>
             <edgeproperty
+                id="[movRental : (movRentals:r4, movie:Shreck3)]::AssociationName"
+                sizeCalculated="true" type="associationName"
+                userDefined="false" visible="true">
+                <name>movRental</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyInBetween">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <offsetX>0.0</offsetX>
+                    <offsetY>-10.0</offsetY>
+                    <related length="2">
+                        <related0>[movRental : (movRentals:r4, movie:Shreck3)]::WayPoint::0</related0>
+                        <related1>[movRental : (movRentals:r4, movie:Shreck3)]::WayPoint::1</related1>
+                    </related>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty
                 id="[movRental : (movRentals:r4, movie:Shreck3)]::source::rolename"
                 sizeCalculated="true" type="rolename"
                 userDefined="false" visible="true">
@@ -904,38 +1040,6 @@
                 <hidden>false</hidden>
             </edgeproperty>
             <edgeproperty
-                id="[movRental : (movRentals:r4, movie:Shreck3)]::AssociationName"
-                sizeCalculated="true" type="associationName"
-                userDefined="false" visible="true">
-                <name>movRental</name>
-                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyInBetween">
-                    <userOffsetX>0.0</userOffsetX>
-                    <userOffsetY>0.0</userOffsetY>
-                    <offsetX>0.0</offsetX>
-                    <offsetY>-10.0</offsetY>
-                    <related length="2">
-                        <related0>[movRental : (movRentals:r4, movie:Shreck3)]::WayPoint::0</related0>
-                        <related1>[movRental : (movRentals:r4, movie:Shreck3)]::WayPoint::1</related1>
-                    </related>
-                </strategy>
-                <hidden>false</hidden>
-            </edgeproperty>
-            <edgeproperty
-                id="[movRental : (movRentals:r4, movie:Shreck3)]::target::rolename"
-                sizeCalculated="true" type="rolename"
-                userDefined="false" visible="true">
-                <name>movie</name>
-                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
-                    <userOffsetX>0.0</userOffsetX>
-                    <userOffsetY>0.0</userOffsetY>
-                    <attached>[movRental : (movRentals:r4, movie:Shreck3)]::WayPoint::1</attached>
-                    <offset_x>8</offset_x>
-                    <offset_y>8</offset_y>
-                    <placement>TOP</placement>
-                </strategy>
-                <hidden>false</hidden>
-            </edgeproperty>
-            <edgeproperty
                 id="[movRental : (movRentals:r4, movie:Shreck3)]::target::multiplicity"
                 sizeCalculated="true" type="multiplicity"
                 userDefined="false" visible="true">
@@ -947,6 +1051,20 @@
                     <offset_x>8</offset_x>
                     <offset_y>8</offset_y>
                     <placement>BOTTOM</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty
+                id="[movRental : (movRentals:r4, movie:Shreck3)]::target::rolename"
+                sizeCalculated="true" type="rolename" userDefined="true" visible="true">
+                <name>movie</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>18.0</userOffsetX>
+                    <userOffsetY>15.0</userOffsetY>
+                    <attached>[movRental : (movRentals:r4, movie:Shreck3)]::WayPoint::1</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>TOP</placement>
                 </strategy>
                 <hidden>false</hidden>
             </edgeproperty>

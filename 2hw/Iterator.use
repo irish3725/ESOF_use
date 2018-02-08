@@ -12,13 +12,10 @@ class Iterator
 attributes
   current:Aggregate
 operations
-  next()
+  next():Aggregate
     begin
-      declare n:Boolean;
-      n := self.hasNext();  
-      if n then 
-        self.current := self.current.next;
-      end;
+	self.current := self.current.next;
+	result := self.current;
     end
 
   hasNext():Boolean
@@ -41,6 +38,5 @@ end
 
 -- constraints
 constraints
-context Iterator::next()
+context Iterator::next():Aggregate
   pre nextPre: current.next->notEmpty 
-  post nextPost: current->notEmpty
