@@ -1,0 +1,49 @@
+model FPS
+
+abstract class fpsState
+	operations
+		
+end
+
+class neutral < fpsState
+	operations
+
+end
+
+class attack < fpsState
+	operations
+
+end
+
+class panic < fpsState
+	operations
+
+end
+
+class die < fpsState
+	operations
+
+end
+
+class FPS
+	attributes
+		
+	operations
+
+	statemachines
+		psm StatePattern
+			states
+			
+			transitions
+
+		end
+	
+		psm Usage
+			states
+
+			transitions
+
+		end
+end
+
+-- associations
