@@ -27,20 +27,35 @@ end
 
 class FPS
 	attributes
-		
+		health : Integer init : 0
+		playerState : fpsState
+		neutralState : fpsState
+		attackState : fpsState
+		panicState : fpsState
+		dieState : fpsState
+
 	operations
+		initInstance()
+		begin
+			
+		end
 
 	statemachines
 		psm StatePattern
 			states
-			
+				startUp:initial
+				neutral		[playerState = neutralState]
+				attack		[playerState = attackState]
+				panic		[playerState = panicState]
+				die			[playerState = dieState]
 			transitions
+				startUp -> neutral {create}
 
 		end
 	
 		psm Usage
 			states
-
+				startUp:initial
 			transitions
 
 		end
