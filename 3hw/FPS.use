@@ -2,27 +2,101 @@ model FPS
 
 abstract class fpsState
 	operations
-		
+		shoot(damage:Integer)
+		begin
+		end
+
+		hit(damage:Integer)
+		begin
+		end
+
+		hide()
+		begin
+		end
 end
 
 class neutral < fpsState
 	operations
+		shoot(damage:Integer)
+		begin
+			self.fps.playerState := self.fps.attackState;
+		end
 
+		hit(damage:Integer)
+		begin
+			self.fps.health := self.fps.health - damage;
+			if (self.fps.health > 0) then
+				self.fps.playerState := self.fps.panicState;
+			end;
+			if (self.fps.health <= 0) then
+				self.fps.playerState := self.fps.dieState;
+			end;
+		end
+
+		hide()
+		begin
+		end
 end
 
 class attack < fpsState
 	operations
+		shoot(damage:Integer)
+		begin
+		end
 
+		hit(damage:Integer)
+		begin
+			self.fps.health := self.fps.health - damage;
+			if (self.fps.health > 0) then
+				self.fps.playerState := self.fps.panicState;
+			end;
+			if (self.fps.health <= 0) then
+				self.fps.playerState := self.fps.dieState;
+			end;
+		end
+
+		hide()
+		begin
+		end
 end
 
 class panic < fpsState
 	operations
+		shoot(damage:Integer)
+		begin
+			self.fps.playerState := self.fps.attackState;
+		end
 
+		hit(damage:Integer)
+		begin
+			self.fps.health := self.fps.health - damage;
+			if (self.fps.health > 0) then
+				self.fps.playerState := self.fps.panicState;
+			end;
+			if (self.fps.health <= 0) then
+				self.fps.playerState := self.fps.dieState;
+			end;
+		end
+
+		hide()
+		begin
+			self.fps.playerState := self.fps.neutralState;
+		end
 end
 
 class die < fpsState
 	operations
+		shoot(damage:Integer)
+		begin
+		end
 
+		hit(damage:Integer)
+		begin
+		end
+
+		hide()
+		begin
+		end
 end
 
 class FPS
@@ -37,7 +111,27 @@ class FPS
 	operations
 		initInstance()
 		begin
-			
+			self.health := 100;
+			self.neutralState := new neutral;
+			self.attackState := new attack;
+			self.panicState := new panic;
+			self.dieState := new die;
+			self.playerState := self.neutralState;
+		end
+
+		shoot(damage:Integer)
+		begin
+			self.playerState.accept(damage);
+		end
+
+		hit(damage:Integer)
+		begin
+			self.playerState.hit(damage);
+		end
+
+		hide()
+		begin
+			self.playerState.hide();
 		end
 
 	statemachines
@@ -50,14 +144,46 @@ class FPS
 				die			[playerState = dieState]
 			transitions
 				startUp -> neutral {create}
-
+				neutral -> attack { [playerState = neutralState] shoot() }
+				neutral -> panic { [playerState = neutralState] hit() [health > 0] }
+				neutral -> die { [playerState = neutralState] hit() [health <= 0] }
+				neutral -> neutral { [playerState = neutralState] hide() } 
+				attack -> panic { [playerState = attackState] hit() [health <= 15 and health > 0] }
+				attack -> neutral { [playerState = attackState] hide() }
+				attack -> attack { [playerState = attackState] hit() [health > 15] }
+				attack -> attack { [playerState = attackState] shoot() }
+				attack -> die { [playerState = attackState] hit() [health <= 0] }
+				panic -> attack { [playerState = panicState] shoot() }
+				panic -> panic { [playerState = panicState] hit() [health > 0] }
+				panic -> die { [playerState = panicState] hit() [health <= 0] }
+				panic -> panic { [playerState = panicState] hide() [health <= 15] }
+				panic -> neutral { [playerState = panicState] hide() [health > 15] }
+				die -> die { [playerState = dieState]}
 		end
 	
 		psm Usage
 			states
 				startUp:initial
+				neutral [health > 15]
+				attack [health > 0]
+				panic [health > 0]
+				die [health <= 0]
 			transitions
-
+				startUp -> neutral {create}
+				neutral -> attack { shoot() }
+				neutral -> panic { hit() [health > 0] }
+				neutral -> die { hit() [health <= 0] }
+				neutral -> neutral { hide() }
+				attack -> neutral { hide() }
+				attack -> panic { hit() [health <= 15] }
+				attack -> attack { shoot() }
+				attack -> attack { hit() [health > 15] }
+				panic -> attack { shoot() }
+				panic -> panic { hit() [health > 0] }
+				panic -> die { hit() [health <= 0] }
+				panic -> neutral { hide() [health > 15] }
+				panic -> panic { hide() [health <= 15] }
+				die -> die {}
 		end
 end
 
