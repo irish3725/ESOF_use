@@ -102,6 +102,7 @@ end
 class Fps
 	attributes
 		health : Integer init : 0
+		damage : Integer init : 0
 		playerState : fpsState
 		neutralState : fpsState
 		attackState : fpsState
@@ -187,8 +188,45 @@ class Fps
 		end
 end
 
+class Weapon
+	attributes
+		damage : Integer
+
+	operations
+		pickup()
+		begin
+			self.fps.damage := self.damage;
+		end
+
+		drop()
+		begin
+			self.fps.damage := 0;
+		end
+end
+
+class Armor
+	attributes
+		armor : Integer
+
+	operations
+		pickup()
+		begin
+			self.fps.health := self.fps.health + self.armor;
+		end
+end
+
 -- associations
 association playerState between
 	fpsState[1]
 	Fps[1]
+end
+
+association playerWeapon between
+	Fps[1]
+	Weapon[1]
+end
+
+association playerArmor between
+	Fps[1]
+	Armor[*]
 end
