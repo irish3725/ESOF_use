@@ -1,0 +1,54 @@
+
+model character 
+
+class character
+
+  attributes
+    heath : Integer init = 0
+    seeOpp : String
+
+  operations
+
+    seeNone()
+    begin
+      self.seeOpp := 'none';
+    end
+
+    seeDef()
+    begin
+      self.seeOpp := 'defeatable';
+    end
+
+    seeUn()
+    begin
+      self.seeOpp := 'undefeatable'; 
+    end
+
+    receiveBlow()
+    begin
+    end
+
+  statemachines
+    psm Usage
+      states
+        -- start node
+        startUp:initial 
+        -- Neutral
+        Neutral     --[seeOpp := 'none']
+        -- Attack
+        Attack      --[seeOpp := 'defeatable']
+        -- Panic    
+        Panic       --[seeOpp = 'undefeatable']
+        -- Die
+        Die         --[health = 0]
+      transitions
+        -- Go to Neutral at beginning
+        startUp -> Neutral      { create }
+        -- if see opponent, go to Attack
+        Neutral -> Attack       { seeDef() }
+        Neutral -> Panic       { seeUn() }
+        Panic -> Die       { receiveBlow() }
+        Attack -> Die       { receiveBlow() }
+    end
+end
+
