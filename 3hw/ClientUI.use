@@ -1,0 +1,86 @@
+
+model ClientUI
+
+class UserAccount
+    attributes
+        name : String
+        ssn : Integer
+        taxinfo : Bag(String)
+        bankinfo : String
+    operations
+        getAccountSSN():Integer
+        begin
+            result:=self.ssn;
+        end
+        setTaxInfo(tinfo: Bag(String))
+        begin
+            self.taxinfo := tinfo
+        end
+
+end
+
+class ClientUI
+    operations
+        createAccount()
+        begin
+        end
+        logIn()
+        begin
+        end
+        fileTaxes()
+        begin
+        end
+        getTaxes()
+        begin
+            declare ussn:Integer, utinfo: Bag(String);
+            ussn:=self.user.getAccountSSN();
+            for entry in self.accesses.entry do
+                if entry.ssn=ussn then
+                    utinfo:=self.accesses.entry.taxinfo
+                end;
+            end;
+            self.user.setTaxInfo(utinfo)
+        end
+        payTaxes()
+        begin
+        end
+        getReturn()
+        begin
+        end
+end
+
+class ClientDatabase
+end
+
+class DatabaseEntry
+    attributes 
+        ssn : Integer
+        taxinfo : String    
+        amountowed : Integer
+end
+
+association entries between
+    ClientDatabase  [1] role database 
+    DatabaseEntry   [0..*]  role entry
+end
+
+association user between
+    UserAccount [0..1]  role user
+    ClientUI    [1]     role using
+end
+
+association access between
+    ClientUI    [0..*]  role accessor
+    ClientDatabase  [1] role accesses
+end
+
+constraints
+
+context ClientUI::getTaxes()
+    pre: self.user->isDefined()
+
+context UserAccount
+    inv: ssn > 99999999
+
+context UserAccount
+    inv: ssn < 1000000000
